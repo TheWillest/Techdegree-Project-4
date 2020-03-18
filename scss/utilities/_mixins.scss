@@ -1,0 +1,23 @@
+
+@mixin display-look(
+	$display: null,
+	$margin: null,
+	$m-width: null) {
+
+	display: $display;
+	margin:$margin;
+	max-width: $m-width;
+}
+
+//======================
+// Media Query Mixin 
+// =====================
+
+@mixin mq($break){
+	$value:$break;
+	@if $value == $break {
+		@media (min-width: 768px) {
+			@content
+		}
+	}
+}

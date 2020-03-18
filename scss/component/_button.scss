@@ -1,0 +1,59 @@
+.btn {
+ @include mq($break) {
+  padding: 10px 30px;
+}
+margin-top: 15px;
+width: 100%;
+color: $white;
+border: none;
+padding: 10px 0;
+text-transform: uppercase;
+border-radius: 5px;
+
+&+.btn {
+ @include mq($break) {
+  margin-left: 10px;
+}
+}
+}
+///===========================
+// loop for .btn & btn hover
+// ===========================
+
+@each $class, $color in $btn-standard {
+  #{$class} {
+    background-color: $color;
+    transition: background-color .3s ease-in-out;
+  }
+}
+
+@each $class, $color-eff in $btn-class {
+  #{$class}:hover {
+    background-color: $color-eff;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
